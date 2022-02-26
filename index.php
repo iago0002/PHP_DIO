@@ -1,5 +1,8 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
-<html lang="">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +19,20 @@
 <form action="script.php" method="post">
     <!-action responsavel por entender qual arquivo/rota
     ou endereço de url eu quero enviar script.php responsavel por processar os dados seguido pelo metodo da requisição->
+    <?php //blocos de comportamento indexado por extensao php; manual PHP
+    $mensagemDeSucesso = isset($_SESSION['mensagem de sucesso']) ? $_SESSION['mensagem de sucesso'] : '';
+    if (!empty($mensagemDeSucesso))
+    {
+        echo $mensagemDeSucesso;
+    }
+    $mensagemDeErro = isset($_SESSION['mensagem de erro']) ? $_SESSION['mensagem de erro'] : '';
+    if (!empty($mensagemDeErro))
+    {
+        echo $mensagemDeErro;
+    }
+    // ? representa a execução do if
+    // : representa a execução do else
+    ?>
     <p>Seu nome: <input type="text" name="nome" /></p>
     <p>Sua idade: <input type="text" name="idade" /></p>
     <p><input type="submit" value="Enviar"/></p>
