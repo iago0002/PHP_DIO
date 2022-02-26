@@ -21,7 +21,7 @@ $idade = 19;
 // var_dump($nome, $idade);
 //mostra o tipo da variavel declarada
 // pode ser passada sem especifica-la dependendo de como ela é passada
-
+ 
 #condicionais PHP
 if ($idade < 6){
     echo 'O competidor é menor de idade!';
