@@ -20,12 +20,12 @@
     <!-action responsavel por entender qual arquivo/rota
     ou endereço de url eu quero enviar script.php responsavel por processar os dados seguido pelo metodo da requisição->
     <?php //blocos de comportamento indexado por extensao php; manual PHP
-    $mensagemDeSucesso = isset($_SESSION['mensagem de sucesso']) ? $_SESSION['mensagem de sucesso'] : '';
+    $mensagemDeSucesso = obterMensagemDeSucesso();
     if (!empty($mensagemDeSucesso))
     {
         echo $mensagemDeSucesso;
     }
-    $mensagemDeErro = isset($_SESSION['mensagem de erro']) ? $_SESSION['mensagem de erro'] : '';
+    $mensagemDeErro = obterMensagemDeErro();
     if (!empty($mensagemDeErro))
     {
         echo $mensagemDeErro;
